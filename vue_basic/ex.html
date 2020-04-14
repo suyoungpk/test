@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Vue.js Sample</title>
+  </head>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js">
+  </script> <!-- 네트워크에서 vue 불러오기 -->
+  <body>
+    <div id="app">
+      {{ message }} <!-- vue 인스턴스의  message 데이터 값 가져오기 -->
+    </div>
+    <script>
+     new Vue({       //vue 인스턴스 생성하며 옵션 객체 전달
+        el: "#app",               // el옵션으로 vue 인스턴스와 id값 app인 DOM연결
+        data: {                     // data옵션으로 message란 이름의 데이터 입력
+          message: "Hello Vue.js!"
+        }
+      }); 
+    </script>
+  </body>
+</html>
