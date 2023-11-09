@@ -90,25 +90,26 @@
     <script>
       let scroll_position = 0;
       let scroll_direction;
+      let isScroll = false;
+      const target = document.querySelector(".float");
       const onScroll = () => {
-        isScrolling = true;
-        // console.log(`start isScrolling:${isScrolling}`);
-        scroll_direction = document.body.getBoundingClientRect().top > scroll_position ? "up" : "down";
-        scroll_position = document.body.getBoundingClientRect().top;
-        // console.log(`scroll_direction : ${scroll_direction}`);
-      };
-      const onScrollend = (e) => {
-        const target = document.querySelector(".float");
-        console.log(`scroll_direction : ${scroll_direction}`);
-        target.classList.remove("fadein", "fadeout");
-        if (scroll_direction === "up") {
-          target.classList.add("fadein");
-        } else {
-          target.classList.add("fadeout");
+        if (isScroll) {
+          scroll_direction = window.scrollY > scroll_position ? "down" : "up";
+          target.classList.remove("fadein", "fadeout");
+          if (scroll_direction === "up") {
+            target.classList.add("fadein");
+          } else {
+            target.classList.add("fadeout");
+          }
+          scroll_position = window.scrollY;
         }
+        isScroll = true;
       };
+
       window.addEventListener("scroll", onScroll);
-      window.addEventListener("scrollend", onScrollend);
+      window.addEventListener("scrollend", () => {
+        isScroll = false;
+      });
     </script>
   </body>
 </html>
