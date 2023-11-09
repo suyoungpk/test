@@ -4,8 +4,111 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>github test</title>
+    <style>
+      .box {
+        width: 100%;
+        height: 90vh;
+      }
+      .box:nth-child(1) {
+        background: #f00;
+      }
+      .box:nth-child(2) {
+        background: #ff0;
+      }
+      .box:nth-child(3) {
+        background: #000;
+      }
+      .box:nth-child(4) {
+        background: #fff;
+      }
+      .box:nth-child(5) {
+        background: #f00;
+      }
+      .float {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background: blue;
+        transition: all 0.3s;
+
+        z-index: 10;
+      }
+      .float2 {
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background: blue;
+        transition: all 0.3s;
+
+        z-index: 10;
+      }
+      .fadeout {
+        animation: fade-out 0.3s ease-in both;
+      }
+      .fadein {
+        animation: fade-in 0.3s ease-in both;
+      }
+      @keyframes fade-out {
+        0% {
+          transform: translateY(0);
+          opacity: 1;
+        }
+        100% {
+          transform: translateY(50px);
+          opacity: 0;
+        }
+      }
+      @keyframes fade-in {
+        0% {
+          transform: translateY(50px);
+          opacity: 0;
+        }
+        100% {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+    </style>
   </head>
   <body>
     github test
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="float fadeout"></div>
+    <script>
+      let scroll_position = 0;
+      let scroll_direction;
+      const onScroll = () => {
+        isScrolling = true;
+        // console.log(`start isScrolling:${isScrolling}`);
+        scroll_direction = document.body.getBoundingClientRect().top > scroll_position ? "up" : "down";
+        scroll_position = document.body.getBoundingClientRect().top;
+        // console.log(`scroll_direction : ${scroll_direction}`);
+      };
+      const onScrollend = (e) => {
+        const target = document.querySelector(".float");
+        console.log(`scroll_direction : ${scroll_direction}`);
+        target.classList.remove("fadein", "fadeout");
+        if (scroll_direction === "up") {
+          target.classList.add("fadein");
+        } else {
+          target.classList.add("fadeout");
+        }
+      };
+      window.addEventListener("scroll", onScroll);
+      window.addEventListener("scrollend", onScrollend);
+    </script>
   </body>
 </html>
