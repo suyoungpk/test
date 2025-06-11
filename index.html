@@ -84,16 +84,26 @@
   </head>
   <body>
     <h1 class="logo">github test</h1>
+    <div class="box">
+      <button onclick="document.querySelectorAll('.box')[7].focus()">
+        last focus
+      </button>
+    </div>
     <div class="box"></div>
     <div class="box"></div>
     <div class="box"></div>
     <div class="box"></div>
     <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
+    <div class="box">
+      <p>7nd</p>
+      <button>7nd button</button>
+    </div>
+    <div class="box">
+      <p>last</p>
+      <button>last button</button>
+    </div>
     <div class="float"></div>
-    <script>
+    <!-- <script>
       let scroll_position = 0;
       let scroll_direction;
       let isScroll = false;
@@ -116,6 +126,6 @@
       window.addEventListener("scrollend", () => {
         isScroll = false;
       });
-    </script>
+    </script> -->
   </body>
 </html>
