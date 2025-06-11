@@ -85,9 +85,7 @@
   <body>
     <h1 class="logo">github test</h1>
     <div class="box">
-      <button onclick="document.querySelectorAll('.box')[7].focus()">
-        last focus
-      </button>
+      <button onclick="test()">last focus</button>
     </div>
     <div class="box"></div>
     <div class="box"></div>
@@ -103,6 +101,18 @@
       <button>last button</button>
     </div>
     <div class="float"></div>
+    <script>
+      function test() {
+        console.log("test start");
+        const list = document.querySelectorAll(".box");
+        const target = list[list.length - 1];
+        window.scrollTo({
+          top: target.getBoundingClientRect().top + window.scrollY,
+          behavior: "smooth",
+        });
+        list[list.length - 1].focus();
+      }
+    </script>
     <!-- <script>
       let scroll_position = 0;
       let scroll_direction;
