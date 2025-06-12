@@ -110,7 +110,11 @@
           top: target.getBoundingClientRect().top + window.scrollY,
           behavior: "smooth",
         });
-        list[list.length - 1].focus();
+        target.setAttribute("tabindex", 0);
+        target.focus();
+        setTimeout(() => {
+          target.removeAttribute("tabindex");
+        }, 500);
       }
     </script>
     <!-- <script>
