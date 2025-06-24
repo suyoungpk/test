@@ -177,13 +177,13 @@
         animation-delay: 0.5s;
         transform: scale(0);
       }
-      .card-benefit__sort.v2 {
+      /* .card-benefit__sort.v2 {
         position: static;
       }
       .card-benefit__sort.v2 .card-benefit__sort {
         -webkit-animation: flagMove1 0.4s cubic-bezier(0.33, 0, 0.2, 1) forwards;
         animation: flagMove1 0.4s cubic-bezier(0.33, 0, 0.2, 1) forwards;
-      }
+      } */
       .card-benefit__sort--contents {
         font-weight: 700;
         font-size: 12px;
@@ -202,7 +202,7 @@
         bottom: 0;
       }
 
-      .card-benefit__sort--contents:after {
+      .card-benefit__sort--contents:before {
         content: "";
         display: inline-block;
         width: 9px;
@@ -213,16 +213,6 @@
         position: absolute;
         left: 20px;
         bottom: -6px;
-      }
-      .card-benefit__sort--contents2 {
-        font-weight: 700;
-        font-size: 12px;
-        color: #fff !important;
-        padding: 8px 13px 9px 42px;
-        display: inline-block;
-        background: #474747;
-        background-size: 33px;
-        border-radius: 25px;
       }
 
       .card-benefit__sort--contents2 img {
@@ -253,18 +243,18 @@
 
     <div class="textbox">
       <div id="benefit-gift-li-2" role="region" class="card-benefit">
-        <div class="card-benefit__sort">
+        <div class="card-benefit__sort" role="img" aria-labelledby="test">
           <p class="card-benefit__sort--contents">
             <img
               alt=""
               src="https://mstg.lguplus.com/static/mb-static/indv/images/simcard/icon/m_icon_benefit-box.png"
             />
-            원하시는 사은품을 선택해 주세요
+            <span id="test"> 원하시는 사은품을 선택해 주세요55</span>
           </p>
         </div>
       </div>
     </div>
-    <div class="textbox">
+    <!-- <div class="textbox">
       <div id="benefit-gift-li-2" class="card-benefit">
         <div class="card-benefit__sort v2">
           <p class="card-benefit__sort--contents">
@@ -289,7 +279,7 @@
           </p>
         </div>
       </div>
-    </div>
+    </div> -->
     <!--
     <h1 class="logo">github test</h1>
     <div class="box">
