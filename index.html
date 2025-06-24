@@ -81,6 +81,87 @@
         }
       }
     </style>-->
+    <style>
+      @keyframes flagMove1 {
+        0% {
+          opacity: 0;
+          -webkit-transform: translate(-53px, 8px) scale(0.63);
+          transform: translate(-53px, 8px) scale(0.63);
+        }
+        20% {
+          opacity: 1;
+          -webkit-transform: translate(-53px, 8px) scale(0.63);
+          transform: translate(-53px, 8px) scale(0.63);
+        }
+        40% {
+          -webkit-transform: translate(16px, -2px) scale(1.11);
+          transform: translate(16px, -2px) scale(1.11);
+        }
+        60% {
+          -webkit-transform: translate(-9px, 1px) scale(0.94);
+          transform: translate(-9px, 1px) scale(0.94);
+        }
+        80% {
+          -webkit-transform: translate(-9px, 1px) scale(1.03);
+          transform: translate(4px, -1px) scale(1.03);
+        }
+        100% {
+          -webkit-transform: translate(0, 0) scale(1);
+          transform: translate(0, 0) scale(1);
+        }
+      }
+      @keyframes flagMove2 {
+        0% {
+          display: none;
+          opacity: 0;
+          -webkit-transform: translate(-53px, 8px) scale(0.63);
+          transform: translate(-53px, 8px) scale(0.63);
+        }
+        20% {
+          display: block;
+          opacity: 1;
+          -webkit-transform: translate(-53px, 8px) scale(0.63);
+          transform: translate(-53px, 8px) scale(0.63);
+        }
+        40% {
+          -webkit-transform: translate(16px, -2px) scale(1.11);
+          transform: translate(16px, -2px) scale(1.11);
+        }
+        60% {
+          -webkit-transform: translate(-9px, 1px) scale(0.94);
+          transform: translate(-9px, 1px) scale(0.94);
+        }
+        80% {
+          -webkit-transform: translate(-9px, 1px) scale(1.03);
+          transform: translate(4px, -1px) scale(1.03);
+        }
+        100% {
+          -webkit-transform: translate(0, 0) scale(1);
+          transform: translate(0, 0) scale(1);
+        }
+      }
+
+      .box1 {
+        margin: 5px 0;
+        width: 100%;
+        padding: 10px 0;
+        background: #000;
+        color: #fff;
+        animation: flagMove1 0.4s cubic-bezier(0.33, 0, 0.2, 1) forwards;
+        -webkit-animation-delay: 0.5s;
+        animation-delay: 0.5s;
+      }
+      .box2 {
+        margin: 5px 0;
+        width: 100%;
+        padding: 10px 0;
+        background: #000;
+        color: #fff;
+        animation: flagMove2 0.4s cubic-bezier(0.33, 0, 0.2, 1) forwards;
+        -webkit-animation-delay: 0.5s;
+        animation-delay: 0.5s;
+      }
+    </style>
   </head>
   <body>
     <div>본문2</div>
@@ -94,6 +175,8 @@
         <i id="screen" style="display: none">상승 1</i>NEW</small
       >
     </div>
+    <div class="box1">원하시는 사은품을 선택해 주세요</div>
+    <div class="box2">원하시는 사은품을 선택해 주세요</div>
     <!--
     <h1 class="logo">github test</h1>
     <div class="box">
