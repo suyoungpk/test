@@ -82,6 +82,11 @@
       }
     </style>-->
     <style>
+      * {
+        margin: 0;
+        padding: 0;
+        border: 0;
+      }
       @keyframes flagMove1 {
         0% {
           opacity: 0;
@@ -161,6 +166,51 @@
         -webkit-animation-delay: 0.5s;
         animation-delay: 0.5s;
       }
+      .card-benefit__sort {
+        position: absolute;
+        top: 0;
+        left: 20px;
+        width: 290px;
+        -webkit-animation: flagMove2 0.4s cubic-bezier(0.33, 0, 0.2, 1) forwards;
+        animation: flagMove2 0.4s cubic-bezier(0.33, 0, 0.2, 1) forwards;
+        -webkit-animation-delay: 0.5s;
+        animation-delay: 0.5s;
+        transform: scale(0);
+      }
+
+      .card-benefit__sort--contents {
+        font-weight: 700;
+        font-size: 12px;
+        color: #fff !important;
+        padding: 8px 13px 9px 42px;
+        display: inline-block;
+        background: #474747;
+        background-size: 33px;
+        border-radius: 25px;
+      }
+
+      .card-benefit__sort--contents img {
+        width: 33px;
+        position: absolute;
+        left: 9px;
+        bottom: 0;
+      }
+
+      .card-benefit__sort--contents:before {
+        content: "";
+        display: inline-block;
+        width: 9px;
+        height: 6px;
+        background: url(https://mstg.lguplus.com/static/mb-static/indv/images/simcard/icon/tooltip_arrow_top.png)
+          no-repeat 0 0;
+        background-size: 9px;
+        position: absolute;
+        left: 20px;
+        bottom: -6px;
+      }
+      .textbox {
+        position: relative;
+      }
     </style>
   </head>
   <body>
@@ -175,8 +225,34 @@
         <i id="screen" style="display: none">상승 1</i>NEW</small
       >
     </div>
+
+    <div class="textbox">
+      <div id="benefit-gift-li-2" role="region" class="card-benefit">
+        <div class="card-benefit__sort">
+          <p class="card-benefit__sort--contents">
+            <img
+              alt=""
+              src="https://mstg.lguplus.com/static/mb-static/indv/images/simcard/icon/m_icon_benefit-box.png"
+            />
+            원하시는 사은품을 선택해 주세요
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="textbox">
+      <div id="benefit-gift-li-2" class="card-benefit">
+        <div class="card-benefit__sort">
+          <p class="card-benefit__sort--contents">
+            <img
+              alt=""
+              src="https://mstg.lguplus.com/static/mb-static/indv/images/simcard/icon/m_icon_benefit-box.png"
+            />
+            원하시는 사은품을 선택해 주세요
+          </p>
+        </div>
+      </div>
+    </div>
     <div class="box1">원하시는 사은품을 선택해 주세요</div>
-    <div class="box2">원하시는 사은품을 선택해 주세요</div>
     <!--
     <h1 class="logo">github test</h1>
     <div class="box">
