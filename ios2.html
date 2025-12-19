@@ -32,16 +32,9 @@
   border-radius: 20px;
 }
 
-/* iOS 16+ / 최신 브라우저 */
-/* @supports (height: 100dvh) {
-  .modal-wrap {
-    max-height: calc(
-      100dvh - 48px - env(safe-area-inset-top) - env(safe-area-inset-bottom)
-    );
-  }
-} */
+
         .modal-header{width:100%;height:30px;}
-        .modal-content{min-width:320px;width:100%;flex:1;overflow-y:auto;}
+        .modal-content{min-width:320px;width:100%;flex:1;overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;}
         .modal-footer{width:100%;height:30px;}
     </style>
     <script>
