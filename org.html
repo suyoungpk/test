@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self'" />
     <link
       rel="preload"
       href="https://www.lguplus.com/about/ko/static/brand-site/79c793d7f1107eee7b6937ab556ccce7d6ace22c/_next/static/media/4cf2300e9c8272f7-s.p.woff2"
@@ -91,11 +91,7 @@
       src="https://www.lguplus.com/about/ko/static/brand-site/79c793d7f1107eee7b6937ab556ccce7d6ace22c/_next/static/chunks/4022-5c3dc36d35cf0e9a.js"
       async=""
     ></script>
-    <link
-      rel="preload"
-      href="https://www.googletagmanager.com/gtm.js?id=GTM-M5VKW92"
-      as="script"
-    />
+
     <meta name="next-size-adjust" content="" />
     <title>유플러스 회사소개 | LG U+</title>
     <meta
@@ -117,12 +113,10 @@
       src="https://www.lguplus.com/about/ko/static/brand-site/79c793d7f1107eee7b6937ab556ccce7d6ace22c/_next/static/chunks/polyfills-42372ed130431b0a.js"
       nomodule=""
     ></script>
-    <script
-      type="text/javascript"
-      src="https://resources.digital-cloud-hnd1.medallia.com/websites/17023/onsite/embed.js"
-      async=""
-      id="gtm_medallia_init"
-    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script>
+      tailwind.config = { important: true };
+    </script>
   </head>
   <body style="overflow: hidden; position: fixed; width: 100%">
     <div hidden=""><!--$--><!--/$--></div>
