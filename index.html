@@ -16,6 +16,10 @@
       table caption {
         display: none;
       }
+      table {
+        border-collapse: separate;
+        border-spacing: 0;
+      }
       .combined-nerget-wrap .combined-nerget-section {
         position: relative;
         padding: 50px 20px;
@@ -339,6 +343,7 @@
         .combined-nerget-section
         .nerget-allinone-benefit
         .table-style {
+        position: relative;
         margin-top: 16px;
         border-collapse: separate;
       }
@@ -352,18 +357,6 @@
         .combined-nerget-section
         .nerget-allinone-benefit
         .table-style
-        th,
-      .combined-nerget-wrap
-        .combined-nerget-section
-        .nerget-allinone-benefit
-        .table-style
-        td {
-        position: relative;
-      }
-      /* .combined-nerget-wrap
-        .combined-nerget-section
-        .nerget-allinone-benefit
-        .table-style
         thead
         > tr,
       .combined-nerget-wrap
@@ -374,13 +367,13 @@
         > tr {
         position: relative;
         z-index: 1;
-      } */
+      }
       .combined-nerget-wrap
         .combined-nerget-section
         .nerget-allinone-benefit
         .table-style
         thead
-        .bg::before {
+        th.bg::before {
         position: absolute;
         top: 0;
         left: 0;
@@ -404,10 +397,18 @@
         .combined-nerget-section
         .nerget-allinone-benefit
         .table-style
-        tbody
-        .bg::before {
+        .bg
+        span {
+        position: relative;
+        z-index: 1;
+      }
+      .combined-nerget-wrap
+        .combined-nerget-section
+        .nerget-allinone-benefit
+        .table-style
+        tbody::before {
         position: absolute;
-        top: 0;
+        bottom: 0;
         left: 0;
         width: 100%;
         height: 100%;
@@ -419,8 +420,7 @@
         .combined-nerget-section
         .nerget-allinone-benefit
         .table-style.v2
-        tbody
-        .bg::before {
+        tbody::before {
         border-radius: 0 0 16px 16px;
       }
       .combined-nerget-wrap
@@ -548,7 +548,7 @@
               </colgroup>
               <thead>
                 <tr>
-                  <th colspan="3" class="bg">IPTV 미선택</th>
+                  <th colspan="3" class="bg"><span>IPTV 미선택</span></th>
                 </tr>
                 <tr>
                   <th>
@@ -567,7 +567,7 @@
               </thead>
               <tbody>
                 <tr>
-                  <td rowspan="2" class="bg">
+                  <td rowspan="2">
                     5G 프리미어 레귤러,<br />LTE 프리미어 플러스,<br />플러스플랜95,<br />
                     플러스플랜<br />105/115/130<br />((구)5G 프리미어
                     플러스/(구)5G 프리미어 슈퍼/(구)5G 시그니처)
@@ -593,7 +593,7 @@
               <thead>
                 <thead>
                   <tr>
-                    <th colspan="3" class="bg">IPTV 선택</th>
+                    <th colspan="3" class="bg"><span>IPTV 선택</span></th>
                   </tr>
                   <tr>
                     <th>
@@ -613,7 +613,7 @@
               </thead>
               <tbody>
                 <tr>
-                  <td rowspan="2" class="bg">
+                  <td rowspan="2">
                     5G 프리미어 레귤러,<br />LTE 프리미어 플러스,<br />플러스플랜95,<br />
                     플러스플랜<br />105/115/130<br />((구)5G 프리미어
                     플러스/(구)5G 프리미어 슈퍼/(구)5G 시그니처)
