@@ -6,7 +6,621 @@
     <title>Document</title>
   </head>
   <body>
-    <div>
+    <style>
+      .combined-nerget-wrap .combined-nerget-section {
+        position: relative;
+        padding: 50px 20px;
+        width: 100%;
+        /* letter-spacing: -0.02em; */
+      }
+      .combined-nerget-wrap .combined-nerget-section:nth-child(2) {
+        background: #f3f5f6;
+      }
+      .combined-nerget-wrap
+        .combined-nerget-section:nth-child(2)
+        .title-wrap
+        .title-txt {
+        margin-top: 12px;
+      }
+
+      .combined-nerget-wrap .combined-nerget-section .title-wrap {
+        text-align: center;
+      }
+      .combined-nerget-wrap .combined-nerget-section .title-wrap .flag {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 4px 12px;
+        background: #fff;
+        border: 1px solid #ff2e98;
+        border-radius: 4px;
+        font-weight: 700;
+        font-size: 13px;
+        line-height: 150%;
+        color: #ff2e98;
+      }
+
+      .combined-nerget-wrap .combined-nerget-section .title-wrap .title-txt {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 130%;
+        color: #181a1b;
+      }
+      .combined-nerget-wrap .combined-nerget-section .title-wrap .subtitle-txt {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 150%;
+        color: #181a1b;
+      }
+      .combined-nerget-wrap
+        .combined-nerget-section
+        .title-wrap
+        .subtitle-txt
+        + .title-txt {
+        margin-top: 6px;
+      }
+      .cl-point {
+        color: #ff2e98 !important;
+      }
+      .combined-nerget-wrap .combined-nerget-section .keyword-list {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+      }
+      .combined-nerget-wrap .combined-nerget-section .keyword-list li {
+        display: inline-block;
+        padding: 8px 18px;
+        background: #f3f5f6;
+        border-radius: 30px;
+        font-weight: 500;
+        font-size: 13px;
+        color: #666;
+      }
+      .combined-nerget-wrap .combined-nerget-section .kv-txt {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 150%;
+        text-align: center;
+        color: #181a1b;
+      }
+      .combined-nerget-wrap .combined-nerget-section .kv-img {
+        text-align: center;
+      }
+      .combined-nerget-wrap .combined-nerget-section .plan-list {
+        position: relative;
+        display: flex;
+        flex-flow: column wrap;
+        gap: 12px;
+      }
+      .combined-nerget-wrap .combined-nerget-section .plan-list::after {
+        position: absolute;
+        top: calc(50% - 10px);
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 50px;
+        height: 50px;
+        background: url("https://www.lguplus.com/static/partners/cx/combined/B200000023/mw-nerget-ico-plus.png")
+          no-repeat 0 0 / contain;
+        content: "";
+        z-index: 1;
+      }
+      .combined-nerget-wrap .combined-nerget-section .plan-list li {
+        padding: 28px;
+        width: 100%;
+        background: #fff;
+        border: 1px solid #dce0e5;
+        border-radius: 16px;
+      }
+      .combined-nerget-wrap .combined-nerget-section .plan-list li .plan-name {
+        font-size: 18px;
+        color: #181a1b;
+        text-align: left;
+      }
+      .combined-nerget-wrap
+        .combined-nerget-section
+        .plan-list
+        li
+        .plan-name
+        p:first-child {
+        font-size: 13px;
+        color: #666;
+        line-height: 150%;
+      }
+      .combined-nerget-wrap .combined-nerget-section .plan-list li .plan-img {
+        margin: 18px 0;
+      }
+      .combined-nerget-wrap .combined-nerget-section .plan-list li .plan-info {
+        /* height: 126px; */
+        /* margin-bottom: 23px; */
+      }
+      .combined-nerget-wrap
+        .combined-nerget-section
+        .plan-list
+        li
+        .plan-info
+        > div {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+      }
+      .combined-nerget-wrap
+        .combined-nerget-section
+        .plan-list
+        li
+        .plan-info
+        > div
+        + div {
+        margin-top: 6px;
+      }
+
+      .combined-nerget-wrap
+        .combined-nerget-section
+        .plan-list
+        li
+        .plan-info
+        dt {
+        font-weight: normal;
+        text-align: left;
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 150%;
+        color: #666;
+      }
+      .combined-nerget-wrap
+        .combined-nerget-section
+        .plan-list
+        li
+        .plan-info
+        dd {
+        text-align: right;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 150%;
+        color: #181a1b;
+      }
+      .combined-nerget-wrap
+        .combined-nerget-section
+        .plan-list
+        li:last-child
+        .plan-info
+        > div:last-child {
+        padding: 8px 12px;
+        width: calc(100% + 24px);
+        margin-left: -12px;
+        background: #fdedf6;
+        border-radius: 4px;
+      }
+      .combined-nerget-wrap
+        .combined-nerget-section
+        .plan-list
+        li:last-child
+        .plan-info
+        > div:last-child {
+        margin-top: 10px;
+      }
+      .combined-nerget-wrap
+        .combined-nerget-section
+        .plan-list
+        li:last-child
+        .plan-info
+        > div:last-child
+        dt {
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 150%;
+        color: #ff2e98;
+      }
+      .combined-nerget-wrap
+        .combined-nerget-section
+        .plan-list
+        li:last-child
+        .plan-info
+        > div:last-child
+        dd {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 150%;
+        color: #ff2e98;
+      }
+      .combined-nerget-wrap .combined-nerget-section .plan-list li .plan-price {
+        width: 100%;
+        padding-top: 18px;
+        margin-top: 18px;
+        border-top: 1px solid #dce0e5;
+        display: flex;
+        justify-content: space-between;
+      }
+      .combined-nerget-wrap
+        .combined-nerget-section
+        .plan-list
+        li
+        .plan-price
+        .plan-price-txt {
+        text-align: left;
+        font-size: 13px;
+        line-height: 150%;
+        color: #181a1b;
+      }
+      .combined-nerget-wrap
+        .combined-nerget-section
+        .plan-list
+        li
+        .plan-price
+        .plan-price-value {
+        text-align: right;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 150%;
+        color: #181a1b;
+      }
+      .combined-nerget-wrap
+        .combined-nerget-section
+        .plan-list
+        li
+        .plan-price
+        .plan-price-value
+        del {
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 150%;
+        text-decoration-line: line-through;
+        vertical-align: middle;
+        color: #888;
+      }
+
+      .combined-nerget-wrap .combined-nerget-section .promotion-info {
+        display: flex;
+        flex-flow: column;
+        gap: 12px 0;
+      }
+      .combined-nerget-wrap .combined-nerget-section .promotion-info li {
+        width: 100%;
+        padding: 20px 24px;
+        border: 1px solid #dce0e5;
+        border-radius: 18px;
+      }
+      .combined-nerget-wrap .combined-nerget-section .promotion-info li .tit {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 150%;
+        color: #666;
+      }
+      .combined-nerget-wrap .combined-nerget-section .promotion-info li .con {
+        margin-top: 8px;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 150%;
+        color: #181a1b;
+      }
+      .combined-nerget-wrap
+        .combined-nerget-section
+        .promotion-info
+        li
+        .con
+        .refer {
+        display: inline-block;
+        padding-left: 1.23em;
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 150%;
+        color: #666;
+      }
+      .combined-nerget-wrap
+        .combined-nerget-section
+        .nerget-allinone-benefit
+        .tit-box
+        p {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 150%;
+        color: #181a1b;
+      }
+      .combined-nerget-wrap
+        .combined-nerget-section
+        .nerget-allinone-benefit
+        .tit-box
+        p:first-child {
+        font-weight: 700;
+        font-size: 18px;
+        margin-bottom: 4px;
+      }
+      .combined-nerget-wrap
+        .combined-nerget-section
+        .nerget-allinone-benefit
+        .table-style {
+        margin-top: 16px;
+        border-collapse: separate;
+      }
+      .combined-nerget-wrap
+        .combined-nerget-section
+        .nerget-allinone-benefit
+        .table-style.v2 {
+        margin-top: 0;
+      }
+      .combined-nerget-wrap
+        .combined-nerget-section
+        .nerget-allinone-benefit
+        .table-style
+        thead,
+      .combined-nerget-wrap
+        .combined-nerget-section
+        .nerget-allinone-benefit
+        .table-style
+        tbody {
+        position: relative;
+      }
+      .combined-nerget-wrap
+        .combined-nerget-section
+        .nerget-allinone-benefit
+        .table-style
+        thead
+        > tr,
+      .combined-nerget-wrap
+        .combined-nerget-section
+        .nerget-allinone-benefit
+        .table-style
+        tbody
+        > tr {
+        position: relative;
+        z-index: 1;
+      }
+      .combined-nerget-wrap
+        .combined-nerget-section
+        .nerget-allinone-benefit
+        .table-style
+        thead::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        content: "";
+        background: #ffddf0;
+        border: 1px solid #f9cbe5;
+        border-radius: 16px 16px 0px 0px;
+      }
+      .combined-nerget-wrap
+        .combined-nerget-section
+        .nerget-allinone-benefit
+        .table-style.v2
+        thead::before {
+        border-radius: 0;
+      }
+      .combined-nerget-wrap
+        .combined-nerget-section
+        .nerget-allinone-benefit
+        .table-style
+        tbody::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        content: "";
+        border: 1px solid #dce0e5;
+      }
+      .combined-nerget-wrap
+        .combined-nerget-section
+        .nerget-allinone-benefit
+        .table-style.v2
+        tbody::before {
+        border-radius: 0 0 16px 16px;
+      }
+      .combined-nerget-wrap
+        .combined-nerget-section
+        .nerget-allinone-benefit
+        .table-style
+        thead
+        th {
+        text-align: center;
+        padding: 12px 0px;
+        font-weight: 700;
+        font-size: 13px;
+        line-height: 150%;
+        color: #181a1b;
+        border-left: 1px solid #f9cbe5;
+        border-top: 1px solid #f9cbe5;
+      }
+      .combined-nerget-wrap
+        .combined-nerget-section
+        .nerget-allinone-benefit
+        .table-style
+        thead
+        tr:first-child
+        th {
+        border-top: 0;
+      }
+      .combined-nerget-wrap
+        .combined-nerget-section
+        .nerget-allinone-benefit
+        .table-style
+        thead
+        th:first-child {
+        border-left: 0;
+      }
+      .combined-nerget-wrap
+        .combined-nerget-section
+        .nerget-allinone-benefit
+        .table-style
+        thead
+        tr:nth-child(2)
+        th {
+        background: #fdedf6;
+      }
+      .combined-nerget-wrap
+        .combined-nerget-section
+        .nerget-allinone-benefit
+        .table-style
+        thead
+        tr:nth-child(2)
+        th:first-child {
+        border-left: 1px solid #f9cbe5;
+      }
+      .combined-nerget-wrap
+        .combined-nerget-section
+        .nerget-allinone-benefit
+        .table-style
+        thead
+        tr:nth-child(2)
+        th:last-child {
+        border-right: 1px solid #f9cbe5;
+      }
+      .combined-nerget-wrap
+        .combined-nerget-section
+        .nerget-allinone-benefit
+        .table-style
+        tbody
+        td {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 150%;
+        color: #181a1b;
+        text-align: center;
+        padding: 16px 12px;
+        border: 0;
+        background: none;
+        border-left: 1px solid #dce0e5;
+        border-top: 1px solid #dce0e5;
+      }
+      .combined-nerget-wrap
+        .combined-nerget-section
+        .nerget-allinone-benefit
+        .table-style
+        tbody
+        tr:first-child
+        td {
+        border-top: 0;
+      }
+      .combined-nerget-wrap
+        .combined-nerget-section
+        .nerget-allinone-benefit
+        .table-style
+        tbody
+        tr:nth-child(odd)
+        td:first-child {
+        border-left: 0;
+      }
+
+      .combined-nerget-wrap .-mt-40 {
+        margin-top: 40px !important;
+      }
+      .combined-nerget-wrap .-mt-24 {
+        margin-top: 24px !important;
+      }
+      .combined-nerget-wrap .fw-b {
+        font-weight: 700 !important;
+      }
+    </style>
+    <div class="combined-nerget-wrap">
+      <div class="combined-nerget-section">
+        <div class="nerget-allinone-benefit -mt-40">
+          <div class="tit-box">
+            <p>올인원 혜택</p>
+            <p class="cl-point">인터넷 요금 월 33,000원 할인</p>
+          </div>
+          <table class="table-style">
+            <caption>
+              올인원 혜택 : 구분, 대상 모바일 요금제, 대상 인터넷 요금제, 월
+              할인 금액
+            </caption>
+            <colgroup>
+              <col style="width: 43.75%" />
+              <col style="width: 31.25%" />
+              <col />
+            </colgroup>
+            <thead>
+              <tr>
+                <th colspan="3">
+                  <div class="bg"></div>
+                  IPTV 미선택
+                </th>
+              </tr>
+              <tr>
+                <th>
+                  대상<br />
+                  모바일 요금제
+                </th>
+                <th>
+                  대상<br />
+                  인터넷 요금제
+                </th>
+                <th>
+                  월<br />
+                  할인 금액
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td rowspan="2">
+                  5G 프리미어 레귤러,<br />LTE 프리미어 플러스,<br />플러스플랜95,<br />
+                  플러스플랜<br />105/115/130<br />((구)5G 프리미어
+                  플러스/(구)5G 프리미어 슈퍼/(구)5G 시그니처)
+                </td>
+                <td>와이파이기본 기가슬림안심 (500M)</td>
+                <td rowspan="2">33,000원</td>
+              </tr>
+              <tr>
+                <td>와이파이기본 기가안심(1G)</td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="table-style v2">
+            <caption>
+              올인원 혜택 : 구분, 대상 모바일 요금제, 대상 인터넷 요금제, 월
+              할인 금액
+            </caption>
+            <colgroup>
+              <col style="width: 43.75%" />
+              <col style="width: 31.25%" />
+              <col />
+            </colgroup>
+            <thead>
+              <thead>
+                <tr>
+                  <th colspan="3">IPTV 선택</th>
+                </tr>
+                <tr>
+                  <th>
+                    대상<br />
+                    모바일 요금제
+                  </th>
+                  <th>
+                    대상<br />
+                    인터넷 요금제
+                  </th>
+                  <th>
+                    월<br />
+                    할인 금액
+                  </th>
+                </tr>
+              </thead>
+            </thead>
+            <tbody>
+              <tr>
+                <td rowspan="2">
+                  5G 프리미어 레귤러,<br />LTE 프리미어 플러스,<br />플러스플랜95,<br />
+                  플러스플랜<br />105/115/130<br />((구)5G 프리미어
+                  플러스/(구)5G 프리미어 슈퍼/(구)5G 시그니처)
+                </td>
+                <td>와이파이기본 기가슬림안심 (500M)</td>
+                <td rowspan="2">27,500원</td>
+              </tr>
+              <tr>
+                <td>와이파이기본 기가안심(1G)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <!-- // combined-nerget-wrap -->
+
+    <!-- <div>
       <p>110 pc이미지를 80으로</p>
       <img
         src="https://www.lguplus.com/static/partners/cx/test/pc-logo-baedal.png"
@@ -21,6 +635,6 @@
         alt=""
         style="width: 80px"
       />
-    </div>
+    </div> -->
   </body>
 </html>
