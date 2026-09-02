@@ -42,7 +42,274 @@
       }
     </style>
   </head>
-  <body>
+ <body>
+  <div
+    class="fixed top-0 right-0 left-0 z-50 w-full bg-white shadow-sm"
+    style="
+      position: relative;
+      top: 0;
+      right: 0;
+      left: 0;
+      z-index: 50;
+      width: 100%;
+      background: #fff;
+    "
+  >
+    <nav role="navigation">
+      <div class="container-section">
+        <div
+          class="relative flex h-14 items-center justify-between md:h-20"
+          style="
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+          "
+        >
+          <div
+            class="flex items-center"
+            style="display: flex; align-items: center"
+          >
+            <a
+              class="focus-ring-base flex cursor-pointer items-center"
+              style="display: flex; align-items: center"
+              aria-label="LG 유플러스 회사소개 홈"
+              href="/about/ko"
+            >
+              닫기
+            </a>
+          </div>
+
+          <div
+            class="flex items-center space-x-3"
+            style="display: flex; align-items: center; gap: 12px"
+          >
+            <div class="sm:hidden">
+              <div
+                class="flex items-center"
+                style="display: flex; align-items: center"
+              >
+                <!-- <button
+                  class="focus-ring-base px-3 py-1 text-sm text-uplus-black cursor-pointer grid place-items-center font-semibold hover:font-bold"
+                  aria-label="EN 언어로 변경"
+                >
+                  <span class="col-start-1 row-start-1">EN</span
+                  ><span
+                    class="col-start-1 row-start-1 font-bold opacity-0 pointer-events-none"
+                    aria-hidden="true"
+                    >EN</span
+                  >
+                </button> -->
+              </div>
+            </div>
+            <button
+              class="focus-ring-base mr-[-16px] cursor-pointer p-2 sm:mr-[-8px]"
+              aria-label="메뉴 닫기"
+              aria-expanded="true"
+              aria-controls="mobile-menu"
+            >
+              <svg
+                class="h-6 w-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div
+      aria-live="polite"
+      aria-atomic="true"
+      class="sr-only"
+      role="status"
+    ></div>
+    <div
+      class="md:hidden absolute top-14 left-0 w-full bg-white z-40"
+      style="
+        position: absolute;
+        top: 14px;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        z-index: 40;
+      "
+      id="mobile-menu"
+      role="navigation"
+      aria-label="모바일 네비게이션"
+    >
+      <nav
+        class="flex flex-col justify-between h-[calc(100vh-56px)]"
+        style="
+          display: flex;
+          flex-flow: column;
+          justify-content: space-between;
+          height: calc(100vh - 56px);
+        "
+      >
+        <div
+          class="px-4 py-2 overflow-y-auto"
+          style="padding: 32px 20px; overflow-y: auto"
+        >
+          <div class="border-b border-gray-e2 last:border-b-0">
+            <button
+              class="w-full flex items-center justify-between p-4 text-left text-base cursor-pointer text-uplus-black font-semibold hover:text-bright-magenta focus-visible:text-bright-magenta focus-ring-base transition-colors"
+              aria-expanded="false"
+              aria-controls="mobile-submenu-기업정보"
+            >
+              <span>기업정보</span
+              ><svg
+                class="w-4 h-4 transition-transform"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <div class="border-b border-gray-e2 last:border-b-0">
+            <button
+              class="w-full flex items-center justify-between p-4 text-left text-base cursor-pointer text-uplus-black font-semibold hover:text-bright-magenta focus-visible:text-bright-magenta focus-ring-base transition-colors"
+              aria-expanded="false"
+              aria-controls="mobile-submenu-서비스/기술"
+            >
+              <span>서비스/기술</span
+              ><svg
+                class="w-4 h-4 transition-transform"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <div class="border-b border-gray-e2 last:border-b-0">
+            <button
+              class="w-full flex items-center justify-between p-4 text-left text-base cursor-pointer text-uplus-black font-semibold hover:text-bright-magenta focus-visible:text-bright-magenta focus-ring-base transition-colors"
+              aria-expanded="false"
+              aria-controls="mobile-submenu-esg"
+            >
+              <span>ESG</span
+              ><svg
+                class="w-4 h-4 transition-transform"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <div class="border-b border-gray-e2 last:border-b-0">
+            <button
+              class="w-full flex items-center justify-between p-4 text-left text-base cursor-pointer text-uplus-black font-semibold hover:text-bright-magenta focus-visible:text-bright-magenta focus-ring-base transition-colors"
+              aria-expanded="false"
+              aria-controls="mobile-submenu-투자정보"
+            >
+              <span>투자정보</span
+              ><svg
+                class="w-4 h-4 transition-transform"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <div class="border-b border-gray-e2 last:border-b-0">
+            <button
+              class="w-full flex items-center justify-between p-4 text-left text-base cursor-pointer text-uplus-black font-semibold hover:text-bright-magenta focus-visible:text-bright-magenta focus-ring-base transition-colors"
+              aria-expanded="false"
+              aria-controls="mobile-submenu-인재채용"
+            >
+              <span>인재채용</span
+              ><svg
+                class="w-4 h-4 transition-transform"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div
+          class="flex items-center justify-center gap-4 h-15"
+          role="group"
+          aria-label="추가 링크"
+          style="
+            display: flex;
+            align-items: cetner;
+            justify-content: center;
+            gap: 4px;
+            height: 60px;
+          "
+        >
+          <a
+            class="block w-20 py-2 text-sm text-uplus-black font-bold text-center focus-ring-base leading-3.5"
+            href="https://www.lguplus.com/"
+            >개인</a
+          ><span class="text-uplus-black" aria-hidden="true">|</span
+          ><a
+            class="block w-20 py-2 text-sm text-uplus-black font-bold text-center focus-ring-base leading-3.5"
+            href="https://www.lguplus.com/biz"
+            >기업</a
+          ><span class="text-uplus-black" aria-hidden="true">|</span
+          ><a
+            class="block w-20 py-2 text-sm text-uplus-black font-bold text-center focus-ring-base leading-3.5"
+            href="https://www.lguplus.com/internet-iptv/soho"
+            >소상공인</a
+          >
+        </div>
+      </nav>
+    </div>
+  </div>
+</body>
+
+  <!-- <body>
     <h1>focus test title</h1>
     <button>focus test1111</button>
     <button id="test" class="sr-only">focus test2222</button>
@@ -692,5 +959,5 @@
         style="width: 80px"
       />
     </div> -->
-  </body>
+  </body> -->
 </html>
