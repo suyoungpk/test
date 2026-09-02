@@ -37,11 +37,15 @@
         height: auto;
         clip: none;
       }
+      .sr-only:focus-visible {
+        outline: 2px solid #000;
+      }
     </style>
   </head>
   <body>
     <h1>focus test title</h1>
-    <button id="test" class="sr-only">focus test</button>
+    <button>focus test1111</button>
+    <button id="test" class="sr-only">focus test2222</button>
     <!-- <script>
       const button = document.querySelector("#test");
       button.addEventListener("focus", () => {
