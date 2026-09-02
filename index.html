@@ -22,7 +22,19 @@
     </style>
   </head>
   <body>
-    <style>
+    <h1>focus test title</h1>
+    <button id="test">focus test</button>
+    <script>
+      const button = document.querySelector("#test");
+      button.addEventListener("focus", () => {
+        alert("DOM FOCUS 발생");
+      });
+
+      button.addEventListener("blur", () => {
+        alert("DOM BLUR 발생");
+      });
+    </script>
+    <!-- <style>
       .combined-nerget-wrap .combined-nerget-section {
         position: relative;
         padding: 50px 20px;
@@ -637,7 +649,7 @@
           </table>
         </div>
       </div>
-    </div>
+    </div> -->
     <!-- // combined-nerget-wrap -->
 
     <!-- <div>
