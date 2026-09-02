@@ -19,19 +19,32 @@
         border-collapse: collapse;
         border-spacing: 0;
       }
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
     </style>
   </head>
   <body>
     <h1>focus test title</h1>
-    <button id="test">focus test</button>
+    <button id="test" class="sr-only">focus test</button>
     <script>
       const button = document.querySelector("#test");
       button.addEventListener("focus", () => {
         alert("DOM FOCUS 발생");
+        button.classList.remove("sr-only");
       });
 
       button.addEventListener("blur", () => {
         alert("DOM BLUR 발생");
+        button.classList.add("sr-only");
       });
     </script>
     <!-- <style>
