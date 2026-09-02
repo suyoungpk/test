@@ -42,11 +42,14 @@
       }
     </style>
   </head>
- <body>
+ <body style="overflow: hidden; position: fixed; width: 100%;">
+   <div style="height:1200px;background:black">
+
+  </div>
   <div
     class="fixed top-0 right-0 left-0 z-50 w-full bg-white shadow-sm"
     style="
-      position: relative;
+      position: fixed;
       top: 0;
       right: 0;
       left: 0;
@@ -64,6 +67,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
+            height:56px;
           "
         >
           <div
@@ -128,16 +132,10 @@
       </div>
     </nav>
     <div
-      aria-live="polite"
-      aria-atomic="true"
-      class="sr-only"
-      role="status"
-    ></div>
-    <div
       class="md:hidden absolute top-14 left-0 w-full bg-white z-40"
       style="
         position: absolute;
-        top: 14px;
+        top: 56px;
         left: 0;
         width: 100%;
         background: #fff;
@@ -151,7 +149,7 @@
         class="flex flex-col justify-between h-[calc(100vh-56px)]"
         style="
           display: flex;
-          flex-flow: column;
+         flex-direction: column;
           justify-content: space-between;
           height: calc(100vh - 56px);
         "
